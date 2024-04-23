@@ -50,12 +50,12 @@ def main():
     args = parser.parse_args()
 
     if args.url is None:
-        url = input("Enter the URL of the website to scrape: ")
+        url = input("Enter the URL of the website to scrape(example:http://quotes.toscrape.com/): ")
     else:
         url = args.url
 
     if args.selectors is None:
-        selectors_input = input("Enter the selectors for data extraction (separated by space): ")
+        selectors_input = input("Enter the selectors for data extraction (separated by space)(example:.author .text): ") #.author and .text are the classes of the data to scrape
         selectors = selectors_input.split()
     else:
         selectors = args.selectors
